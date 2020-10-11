@@ -1,0 +1,30 @@
+{
+  "name": "app-ts",
+  "version": "1.0.0",
+  "description": "app based on express on back and react on front",
+  "main": "app.ts",
+  "repository": "",
+  "scripts": {
+    "start": "concurrently \"npm run dev\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc init": "tsc -- --init",
+    "tsc": "tsc",
+    "dev": "tsnd --respawn --transpile-only ./server/app/app.ts",
+    "prod": "tsc && node ./server/build/app.ts",
+    "client": "npm run start --prefix client/valuter"
+  },
+  "keywords": [
+    "ts",
+    "express",
+    "react"
+  ],
+  "author": "Artem <gromovartem04@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "node-fetch": "^2.6.0"
+  }
+}
