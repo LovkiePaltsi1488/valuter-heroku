@@ -2,16 +2,10 @@
   "name": "app-ts",
   "version": "1.0.0",
   "description": "app based on express on back and react on front",
-  "main": "app.ts",
-  "repository": "",
+  "main": "app.js",
+  "repository": "https://github.com/LovkiePaltsi1488/valuter-heroku",
   "scripts": {
-    "start": "concurrently \"npm run dev\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc init": "tsc -- --init",
-    "tsc": "tsc",
-    "dev": "tsnd --respawn --transpile-only ./server/app/app.ts",
-    "prod": "tsc && node ./server/build/app.ts",
-    "client": "npm run start --prefix client/valuter"
+    "start": "node app/app.js"
   },
   "keywords": [
     "ts",
